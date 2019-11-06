@@ -1,0 +1,25 @@
+interface Check1 {
+	public void m1();
+
+	public default void m2() {
+		System.out.println("in m2 of check interface");
+	}
+}
+
+public class InterfaceLab2 implements Check1 {
+	public static void main(String[] args) {
+		Lab2 l2 = new Lab2();
+		l2.m1();
+		l2.m2();
+	}
+
+	@Override
+	public void m1() {
+		System.out.println("m1 of lab2");
+	}
+
+	@Override
+	public void m2() {
+		System.out.println("m2 of lab2");
+	}
+}
